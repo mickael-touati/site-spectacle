@@ -60,37 +60,41 @@ if (isset($_POST['submit'])) {
     <title>Inscription</title>
     <link rel="stylesheet" href="auth.css">
 </head>
-<body>
-    <h1 class="page-title">Inscription</h1>
-    
-    <div class="container">
-        <section>
-            
 
-        <form action="" method="post">
-            <label for="firstName">Prénom</label>
-            <input type="text" name="firstName"><br/><br/>
-            <label for="lastName">Nom</label>
-            <input type="text" name="lastName"><br/><br/>
-            <label for="email">Email</label>
-            <input type="email" name="email"><br/><br/>
-            <label for="password">Mot de pass</label>
-            <input type="password" name="password"><br/><br/>
-            <label for="confirm_password">confirme password</label>
-            <input type="password" name="confirm_password"><br/><br/>
+<body >
+    <div class="auth">
 
-            <input type="submit" name="submit" value="inscrire">
-            <p>Avez-vous déja un compte <a href="signin.php">connecter</a></p>
-        </form>
-        </section>
+        <h1 class="page-title">Inscription</h1>
         
-        <section class="image-section">
-            <div class="image-section-content">
-                <img src="./image-auth/hotel3.webp" alt="Hôtel" class="hotel-image">
-                <h2>Ravi de vous voir!</h2>
-                <p>Rejoignez-nous et découvrez une expérience unique dans nos établissements d'exception.</p>
-            </div>
-        </section>
+        <div class="container">
+            <section>
+                
+                
+                <form action="" method="post">
+                    <label for="firstName">Prénom</label>
+                    <input type="text" name="firstName"><br/><br/>
+                    <label for="lastName">Nom</label>
+                    <input type="text" name="lastName"><br/><br/>
+                    <label for="email">Email</label>
+                    <input type="email" name="email"><br/><br/>
+                    <label for="password">Mot de pass</label>
+                    <input type="password" name="password"><br/><br/>
+                    <label for="confirm_password">confirme password</label>
+                    <input type="password" name="confirm_password"><br/><br/>
+                    
+                    <input type="submit" name="submit" value="inscrire">
+                    <p>Avez-vous déja un compte <a href="signin.php">connecter</a></p>
+                </form>
+            </section>
+            
+            <section class="image-section">
+                <div class="image-section-content">
+                    <img src="./image-auth/hotel3.webp" alt="Hôtel" class="hotel-image">
+                    <h2>Ravi de vous voir!</h2>
+                    <p>Rejoignez-nous et découvrez une expérience unique dans nos établissements d'exception.</p>
+                </div>
+            </section>
+        </div>
     </div>
-</body>
-</html>
+    </body>
+    </html>

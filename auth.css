@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+.auth {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(78, 151, 240);
     background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
