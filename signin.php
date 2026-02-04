@@ -1,0 +1,47 @@
+<?php
+session_start();
+require_once 'db.php';
+
+function secrityInput($inputName){
+    return trim(htmlspecialchars($inputName));
+}
+
+if (isset($_POST['submit'])) {
+    $email = secrityInput($_POST['email']);
+    $password = secrityInput($_POST['password']);
+    $_SESSION['message']= "";
+
+    if (!empty($email) && !empty($password)){
+        $verifyEmail = $pdo->prepare('SELECT * FROM user WHERE email = ?');
+        $verifyEmail->execute([$email]);
+        $data_User = $verifyEmail->fetch(PDO::FETCH_ASSOC);
+
+        if ($data_User && password_verify($password, $data_User['password'])) {
+            $_SESSION['id'] = $data_User['id'];
+            $_SESSION['firstName'] = $data_User['firstName'];
+            $_SESSION['lastName'] = $data_User['lastName'];
+            $_SESSION['email'] = $data_User['email'];
+            $_SESSION['password'] = $data_User['password'];
+            $_SESSION['message'] = "connexion réussie avec succès";
+            header("Location: profil.php");
+            exit();
+         
+        } else {
+            $_SESSION['message'] = "Email ou mot de passe incorrect";
+        }
+    } else {
+        $_SESSION['message'] = "tous les champs sont requis";
+    }
+}
+
+?>
+
+<form action="" method="post">
+<label for="email">Email</label>
+<input type="text" name="email"> <br/><br/>
+<label for="password">Mot de passe</label>
+<input type="password" name="password"> <br/><br/>
+<input type="submit" name="submit" value="connexion">
+<?php if(isset($_SESSION['message'])) echo $_SESSION['message'];?>
+    <p>vous n'avez de compte <a href="signup.php">s'inscrire</a></p>
+</form>

@@ -1,8 +1,8 @@
 <?php
 
 
-$dsn = 'mysql:host=localhost; dbname=test-authentification; charset=utf8mb4';
-$username = 'lamali-abdallah_room-reservation';
+$dsn = 'mysql:host=lamali-abdallah.students-laplateforme.io; dbname=lamali-abdallah_room-reservation; charset=utf8mb4';
+$username = 'room-reservation';
 $password = 'Lamali26100';
  
 try {
