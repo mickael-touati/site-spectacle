@@ -37,17 +37,40 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
 
-<form action="" method="post">
-<label for="email">Email</label>
-<input type="text" name="email"> <br/><br/>
-<label for="password">Mot de passe</label>
-<input type="password" name="password"> <br/><br/>
-<input type="submit" name="submit" value="connexion">
-<?php if(isset($_SESSION['message'])) echo $_SESSION['message'];?>
-    <p>vous n'avez de compte <a href="signup.php">s'inscrire</a></p>
-</form>
+    <h1 class="page-title">Connexion</h1>
+    
+    <div class="container">
+        <section>
+           
 
-<?php
-require_once './includes/footer.php';
-?>
+           <form action="" method="post">
+                <label for="email">Email</label>
+                <input type="text" name="email"> <br/><br/>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password"> <br/><br/>
+                <input type="submit" name="submit" value="connexion">
+                <?php if(isset($_SESSION['message'])) echo $_SESSION['message'];?>
+                    <p>vous n'avez de compte <a href="signup.php">s'inscrire</a></p>
+            </form>
+        </section>
+        
+        <section class="image-section">
+            <div class="image-section-content">
+                <img src="./image-auth/hotel2.avif" alt="Hôtel" class="hotel-image">
+                <h2>Bon retour!</h2>
+                <p>Nous sommes ravis de vous revoir. Connectez-vous pour accéder à votre espace personnel.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
