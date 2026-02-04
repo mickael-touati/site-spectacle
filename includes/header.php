@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakers</title>
+    <title>site de spectacle</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-   <header class="logo_lakers">
+   <header class="logo_spectacle">
     <div>
-    <h1><img src="images/Los_Angeles_Lakers_logo.svg.png" alt="logo_lakers"></h1>
+    <h1><img src="./images/icone bon site spectacle.png" alt="logo_spectacle"></h1>
     </div>
     <nav class="menu">
         <ul>
