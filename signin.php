@@ -23,7 +23,6 @@ if (isset($_POST['submit'])) {
             $_SESSION['firstName'] = $data_User['firstName'];
             $_SESSION['lastName'] = $data_User['lastName'];
             $_SESSION['email'] = $data_User['email'];
-            $_SESSION['password'] = $data_User['password'];
             $_SESSION['message'] = "connexion réussie avec succès";
             header("Location: profil.php");
             exit();
@@ -46,31 +45,37 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="auth.css">
 </head>
 <body>
+    <div class="auth">
 
-    <h1 class="page-title">Connexion</h1>
-    
-    <div class="container">
-        <section>
-           
-
-           <form action="" method="post">
-                <label for="email">Email</label>
-                <input type="text" name="email"> <br/><br/>
-                <label for="password">Mot de passe</label>
-                <input type="password" name="password"> <br/><br/>
-                <input type="submit" name="submit" value="connexion">
-                <?php if(isset($_SESSION['message'])) echo $_SESSION['message'];?>
-                    <p>vous n'avez de compte <a href="signup.php">s'inscrire</a></p>
-            </form>
-        </section>
+        <h1 class="page-title">Connexion</h1>
         
-        <section class="image-section">
-            <div class="image-section-content">
-                <img src="./image-auth/hotel2.avif" alt="Hôtel" class="hotel-image">
-                <h2>Bon retour!</h2>
-                <p>Nous sommes ravis de vous revoir. Connectez-vous pour accéder à votre espace personnel.</p>
-            </div>
-        </section>
+        <div class="container">
+            <section>
+                
+                
+                <form action="" method="post">
+                    <label for="email">Email</label>
+                    <input type="text" name="email"> <br/><br/>
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password"> <br/><br/>
+                    <input type="submit" name="submit" value="connexion">
+                    <?php if(isset($_SESSION['message'])) echo $_SESSION['message'];?>
+                    <p>vous n'avez de compte <a href="signup.php">s'inscrire</a></p>
+                </form>
+            </section>
+            
+            <section class="image-section">
+                <div class="image-section-content">
+                    <img src="./image-auth/hotel2.avif" alt="Hôtel" class="hotel-image">
+                    <h2>Bon retour!</h2>
+                    <p>Nous sommes ravis de vous revoir. Connectez-vous pour accéder à votre espace personnel.</p>
+                </div>
+            </section>
+        </div>
     </div>
-</body>
-</html>
+    </body>
+    </html>
+    
+<?php
+require_once './includes/footer.php';
+?>

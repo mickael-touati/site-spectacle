@@ -103,8 +103,7 @@ header.logo_spectacle div img {
 }
 
 footer {
-    background-color: black;
-    color: white;
+    background-color: #0000003d;
     text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
     padding: 15px 20px;
@@ -115,4 +114,23 @@ footer a{
     color:rgb(78, 151, 240); 
     text-decoration: none;
     margin: 5px;
+}
+
+footer a:hover{
+    color:rgb(78, 151, 240); 
+    text-decoration: underline;
+}
+
+
+.cadre{
+gap: 40px;
+width: 90vw;
+display: flex;
+background-color: #fbfdfd;
+align-items: center; 
+justify-content: center; 
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+overflow: hidden;
 }

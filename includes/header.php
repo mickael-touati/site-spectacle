@@ -15,8 +15,8 @@
     <nav class="menu">
         <ul>
             <li><a href="index.php" class="active">Accueil</a></li>
-            <li><a href="reservation-form.php" class="active">Creer une reservation de salle</a></li>
-            <li><a href="shedule.php" class="active">Reservation</a></li>
+            <li><a href="reservation-form.php" class="active">Reservation</a></li>
+            <li><a href="shedule.php" class="active">Planing</a></li>
 
             <?php
             if (isset($_SESSION['id'])) {

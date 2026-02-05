@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
+.auth {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(78, 151, 240);
     background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
@@ -96,7 +96,7 @@ input[type="submit"] {
     border-radius: 50px;
     background: linear-gradient(135deg, rgb(78, 151, 240) 0%, rgb(58, 131, 220) 100%);
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
@@ -144,28 +144,6 @@ p a:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
-}
-
-.image-section::before {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    top: -100px;
-    right: -100px;
-}
-
-.image-section::after {
-    content: '';
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    bottom: -50px;
-    left: -50px;
 }
 
 .image-section-content {
