@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
                 $passwordHaching = password_hash($password, PASSWORD_DEFAULT);
                 // insertion des données à la basse de données 
                 $insertData = $pdo->prepare('INSERT INTO user(firstName, lastName, email, password ) VAlUES (:firstName, :lastName, :email, :password)');
-                $insertData->bindValue(':firstName', $firstName);
+                $insertData->bindValue(':firstName', $firstName, PDO::PARAM_STR);
                 $insertData->bindValue(':lastName', $lastName);
                 $insertData->bindValue(':email', $email);
                 $insertData->bindValue(':password', $passwordHaching);

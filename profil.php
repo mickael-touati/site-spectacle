@@ -10,8 +10,9 @@ if (!isset($_SESSION['id'])) {
 
 // Récupérer les informations à jour de l'utilisateur depuis la base de données
 try {
-    $stmt = $pdo->prepare('SELECT firstName, lastName, email FROM user WHERE id = ?');
-    $stmt->execute([$_SESSION['id']]);
+    $stmt = $pdo->prepare('SELECT firstName, lastName, email FROM user WHERE id = :id');
+    $stmt->bindValue(':id', $_SESSION['id'], PDO::PARAM_INT);
+    $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     
     if ($user) {
