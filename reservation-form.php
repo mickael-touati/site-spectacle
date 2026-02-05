@@ -51,34 +51,37 @@ if (isset($_POST["event_title"])) {
 
 </head>
 <body>
+<div class="reservation">
+                <h1>Formulaire De Réservation</h1>
 
-<form method="post">
 
-<?php
-if ($message != "") {
-    echo "<p>$message</p>";
-}
-?>
+    <div class="container">
 
-<h2>Formulaire De Réservation</h2>
-<h5>Utilisateur : test</h5>
+        <form method="post">
+            
+            <?php
+        if ($message != "") {
+            echo "<p>$message</p>";
+            }
+            ?>
+            <label>Titre :</label>
+            <input type="text" name="event_title" required>
 
-<label>Titre :</label>
-<input type="text" name="event_title" required>
+            <label>Heure début :</label>
+            <input type="time" name="start_date" required>
 
-<label>Heure début :</label>
-<input type="time" name="start_date" required>
+            <label>Heure fin :</label>
+            <input type="time" name="end_date" required>
 
-<label>Heure fin :</label>
-<input type="time" name="end_date" required>
+            <label>Date :</label>
+            <input type="date" name="date" required>
 
-<label>Date :</label>
-<input type="date" name="date" required>
+            <label>Description :</label>
+            <textarea name="description" required></textarea>
 
-<label>Description :</label>
-<textarea name="description" required></textarea>
+            <button type="submit">Soumettre la réservation</button>
 
-<button type="submit">Soumettre la réservation</button>
-
-</form>
+            </form>
+    </div>
+</div>
 
