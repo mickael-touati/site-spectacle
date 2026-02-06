@@ -1,0 +1,86 @@
+.profile-container {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.profile-title {
+    font-size: 2.5rem;
+    color: rgb(78, 151, 240);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.profile-info {
+    background: linear-gradient(135deg, #e8f0fe 0%, #f0e8ff 100%);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.profile-info p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.profile-info strong {
+    color: rgb(78, 151, 240);
+    font-weight: bold;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, rgb(78, 151, 240) 0%, rgb(58, 131, 220) 100%);
+    color: white;
+    box-shadow: 0 5px 20px rgba(78, 151, 240, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(78, 151, 240, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #ff6b9d 0%, #ffb347 100%);
+    color: white;
+    box-shadow: 0 5px 20px rgba(255, 107, 157, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}

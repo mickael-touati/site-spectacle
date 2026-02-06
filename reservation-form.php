@@ -2,6 +2,9 @@
 session_start();
 require_once 'db.php';
 
+require_once './includes/header.php';
+
+
 $message = "";
 
 if (isset($_POST["event_title"])) {
@@ -61,7 +64,7 @@ if (isset($_POST["event_title"])) {
             
             <?php
         if ($message != "") {
-            echo "<p>$message</p>";
+            echo "$message";
             }
             ?>
             <label>Titre :</label>
@@ -85,3 +88,6 @@ if (isset($_POST["event_title"])) {
     </div>
 </div>
 
+<?php
+require_once './includes/footer.php';
+?>
