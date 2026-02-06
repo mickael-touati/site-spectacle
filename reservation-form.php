@@ -24,8 +24,8 @@ if (isset($_POST["event_title"])) {
     else {
 
         $sql = $pdo->prepare(
-            "INSERT INTO event (event_title, start_date, end_date, description)
-             VALUES (:event_title, :start_date, :end_date, :description)"
+            "INSERT INTO event (event_title,date, start_date, end_date, description)
+             VALUES (:event_title,:date, :start_date, :end_date, :description)"
         );
 
         //  Utilisation correcte des :nom avec tableau associatif
