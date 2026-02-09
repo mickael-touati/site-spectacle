@@ -17,6 +17,7 @@
             <li><a href="index.php" class="active">Accueil</a></li>
             <li><a href="reservation-form.php" class="active">Reservation</a></li>
             <li><a href="planing.php" class="active">Planing</a></li>
+            <li><a href="shedule.php" class="active">shedule</a></li>
 
             <?php
             if (isset($_SESSION['id'])) {

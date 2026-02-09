@@ -1,84 +1,55 @@
 <?php
-
-session_start();
 require_once 'db.php';
 
+// Récupérer l'ID
+$id = $_GET['id'];
+
+$data = $pdo->prepare("SELECT * FROM event WHERE id = :id");
+$data->bindValue(':id', $id, PDO::PARAM_INT);
+$data->execute();
+$event = $data->fetch();
+
+if (!$event) {
+    header('Location: index.php');
+    exit;
+}
+
 require_once './includes/header.php';
-
-$message = "";
-
-if (isset($_POST["event_title"])) {
-
-    $event_title = $_POST["event_title"];
-    $date        = $_POST["date"];
-    $start_date  = $_POST["start_date"];
-    $end_date    = $_POST["end_date"];
-    $description = $_POST["description"];
-
-        $sql = $pdo->prepare(
-            "INSERT INTO event (event_title, start_date, end_date, description)
-             VALUES (:event_title, :start_date, :end_date, :description)"
-        );
-
-        //  Utilisation correcte des :nom avec tableau associatif
-        if ($sql->execute([
-            ':event_title' => $event_title,
-            ':start_date'  => $start_date,
-            ':end_date'    => $end_date,
-            ':description' => $description
-        ])) {
-            $message = "Réservation envoyée";
-        } else {
-            $message = "La réservation est annulée";
-        }
-    }
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>detail reservation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="reservation">
-                <h1>Formulaire De Réservation</h1>
-
-
-    <div class="container">
-
-        <form method="post">
+<link rel="stylesheet" href="detaill.css">
+<section class="event-detail">
+    <div class="event-detail-card">
+        <h1><?= htmlspecialchars($event["event_title"]) ?></h1>
+        
+        <div class="event-info">
+            <div class="info-item">
+                <span class="icon"> </span>
+                <div>
+                    <strong>Début</strong>
+                    <p><?= date("d/m/Y à H:i", strtotime($event["start_date"])) ?></p>
+                </div>
+            </div>
             
-            <?php
-        if ($message != "") {
-            echo "$message";
-            }
-            ?>
-            <label>Titre :</label>
-            <input type="text" name="event_title" required>
-
-            <label>Heure début :</label>
-            <input type="time" name="start_date" required>
-
-            <label>Heure fin :</label>
-            <input type="time" name="end_date" required>
-
-            <label>Date :</label>
-            <input type="date" name="date" required>
-
-            <label>Description :</label>
-            <textarea name="description" required></textarea>
-
-            <button type="submit">Soumettre la réservation</button>
-
-            </form>
+            <div class="info-item">
+                <span class="icon"></span>
+                <div>
+                    <strong>Fin</strong>
+                    <p><?= date("d/m/Y à H:i", strtotime($event['end_date'])) ?></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="event-description">
+            <h2>Description</h2>
+            <p><?= nl2br(htmlspecialchars($event['description'])) ?></p>
+        </div>
+        
+        <div class="event-actions">
+            <a href="reservation-form.php?id=<?= $event['id'] ?>" class="btn-reserve">Réserver maintenant</a>
+            <a href="shedule.php" class="btn-back"> Retour à la liste</a>
+        </div>
     </div>
-</div>
+</section>
 
-<?php
-require_once './includes/footer.php';
-?>
-</body>
-</html>
+<?php require_once './includes/footer.php'; ?>
+

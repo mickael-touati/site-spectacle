@@ -15,6 +15,9 @@ if (isset($_POST["event_title"])) {
     $end_date    = $_POST["end_date"];
     $description = $_POST["description"];
 
+    $start_datetime = $date . " " . $start_time . ":00";
+    $end_datetime   = $date . " " . $end_time . ":00";
+
     // Jour de la semaine (0 = dimanche, 6 = samedi)
     $jour = date('w', strtotime($date));
 
