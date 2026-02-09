@@ -23,7 +23,6 @@ require_once './includes/header.php';
         
         <div class="event-info">
             <div class="info-item">
-                <span class="icon"> </span>
                 <div>
                     <strong>Début</strong>
                     <p><?= date("d/m/Y à H:i", strtotime($event["start_date"])) ?></p>
@@ -31,7 +30,6 @@ require_once './includes/header.php';
             </div>
             
             <div class="info-item">
-                <span class="icon"></span>
                 <div>
                     <strong>Fin</strong>
                     <p><?= date("d/m/Y à H:i", strtotime($event['end_date'])) ?></p>
@@ -44,10 +42,9 @@ require_once './includes/header.php';
             <p><?= nl2br(htmlspecialchars($event['description'])) ?></p>
         </div>
         
-        <div class="event-actions">
-            <a href="reservation-form.php?id=<?= $event['id'] ?>" class="btn-reserve">Réserver maintenant</a>
-            <a href="shedule.php" class="btn-back"> Retour à la liste</a>
-        </div>
+      <div class="event-actions">
+    <a href="shedule.php" class="btn-back">Retour au planning</a>
+</div>
     </div>
 </section>
 
