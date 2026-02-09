@@ -23,7 +23,6 @@ require_once './includes/header.php';
         
         <div class="event-info">
             <div class="info-item">
-                <span class="icon"> </span>
                 <div>
                     <strong>Début</strong>
                     <p><?= date("d/m/Y à H:i", strtotime($event["start_date"])) ?></p>
@@ -31,7 +30,6 @@ require_once './includes/header.php';
             </div>
             
             <div class="info-item">
-                <span class="icon">🕐</span>
                 <div>
                     <strong>Fin</strong>
                     <p><?= date("d/m/Y à H:i", strtotime($event['end_date'])) ?></p>
