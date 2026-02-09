@@ -2,6 +2,9 @@
 session_start();
 require_once 'db.php';
 
+require_once './includes/header.php';
+
+
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['id'])) {
     header("Location: signin.php");
@@ -55,3 +58,7 @@ try {
     </div>
 </body>
 </html>
+
+<?php
+require_once './includes/footer.php';
+?>

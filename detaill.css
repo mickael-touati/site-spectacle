@@ -1,0 +1,155 @@
+/* Section détail événement */
+.event-detail {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0;
+}
+
+.event-detail-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Titre principal */
+.event-detail-card h1 {
+    color: rgb(78, 151, 240);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 3px solid rgb(78, 151, 240);
+    padding-bottom: 20px;
+}
+
+/* Conteneur des informations */
+.event-info {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    border-left: 4px solid rgb(78, 151, 240);
+}
+
+.info-item .icon {
+    font-size: 2em;
+}
+
+.info-item strong {
+    display: block;
+    color: rgb(78, 151, 240);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #333;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* Description */
+.event-description {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: rgba(78, 151, 240, 0.05);
+    border-radius: 15px;
+}
+
+.event-description h2 {
+    color: rgb(78, 151, 240);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.event-description p {
+    color: #555;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Boutons d'action */
+.event-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-reserve,
+.btn-back {
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.btn-reserve {
+    background-color: rgb(78, 151, 240);
+    color: #fbfdfd;
+}
+
+.btn-reserve:hover {
+    background-color: rgb(58, 131, 220);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(78, 151, 240, 0.4);
+}
+
+.btn-back {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.btn-back:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .event-detail-card {
+        padding: 25px;
+    }
+    
+    .event-detail-card h1 {
+        font-size: 2em;
+    }
+    
+    .event-info {
+        flex-direction: column;
+    }
+    
+    .info-item {
+        min-width: auto;
+    }
+    
+    .event-actions {
+        flex-direction: column;
+    }
+    
+    .btn-reserve,
+    .btn-back {
+        width: 100%;
+        text-align: center;
+    }
+}

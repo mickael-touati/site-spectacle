@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once 'db.php';
+
+require_once './includes/header.php';
+
 // il permet de sécriser les input
 function secrityInput($nameInput) {
     return trim(htmlspecialchars($nameInput));
@@ -98,3 +101,7 @@ if (isset($_POST['submit'])) {
     </div>
     </body>
     </html>
+
+<?php
+require_once './includes/footer.php';
+?>

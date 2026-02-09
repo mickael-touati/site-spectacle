@@ -2,6 +2,8 @@
 session_start();
 require_once 'db.php';
 
+require_once './includes/header.php';
+
 function secrityInput($inputName){
     return trim(htmlspecialchars($inputName));
 }
@@ -74,3 +76,6 @@ if (isset($_POST['submit'])) {
     </body>
     </html>
     
+<?php
+require_once './includes/footer.php';
+?>

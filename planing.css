@@ -1,0 +1,76 @@
+
+/* Styles pour le tableau de planning */
+table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+table thead {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+}
+
+table thead th {
+    padding: 20px;
+    color: #fbfdfd;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+table tbody th {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+table tbody td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+table tbody td:hover {
+    background-color: rgba(78, 151, 240, 0.1);
+}
+
+table tbody td a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(78, 151, 240);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+table tbody td a:hover {
+    background-color: rgb(78, 151, 240);
+    color: #fbfdfd;
+    transform: scale(1.05);
+}
+
+/* Responsive pour le tableau */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    table thead th,
+    table tbody th,
+    table tbody td {
+        padding: 8px;
+    }
+}
