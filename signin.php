@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
                     <input type="password" name="password"> <br/><br/>
                     <input type="submit" name="submit" value="connexion">
                     <?php if(isset($_SESSION['message'])) echo $_SESSION['message'];?>
-                    <p>vous n'avez de compte <a href="signup.php">s'inscrire</a></p>
+                    <p>vous n'avez pas de compte <a href="signup.php">S'inscrire</a></p>
                 </form>
             </section>
             

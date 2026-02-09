@@ -80,13 +80,13 @@ if (isset($_POST['submit'])) {
                     <input type="text" name="lastName"><br/><br/>
                     <label for="email">Email</label>
                     <input type="email" name="email"><br/><br/>
-                    <label for="password">Mot de pass</label>
+                    <label for="password">Mot de passe</label>
                     <input type="password" name="password"><br/><br/>
-                    <label for="confirm_password">confirme password</label>
+                    <label for="confirm_password">Confirmer le mot de passe</label>
                     <input type="password" name="confirm_password"><br/><br/>
                     
                     <input type="submit" name="submit" value="inscrire">
-                    <p>Avez-vous déja un compte <a href="signin.php">connecter</a></p>
+                    <p>Avez-vous déja un compte <a href="signin.php">Se connecter</a></p>
                 </form>
             </section>
             

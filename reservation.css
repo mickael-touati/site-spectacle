@@ -12,7 +12,7 @@
 }
 .container {
     display: flex;
-    max-width: 1000px;
+    max-width: 600px;
     width: 70%;
     padding: 25px;
     background: white;
@@ -133,8 +133,8 @@ button {
     background-color: rgb(78, 151, 240);
     color: white;
     border: none;
-    padding: 9px;
-    font-size: 14px;
+    padding: 12px;
+    font-size: 16px;
     border-radius: 25px;
     cursor: pointer;
 }
